@@ -3,6 +3,10 @@ import { db } from "@/db";
 import Button from "@/components/Button";
 import { deleteTodo } from "@/actions";
 
+//export const revalidate  = 1;
+
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const todos = await db.todo.findMany();
 
